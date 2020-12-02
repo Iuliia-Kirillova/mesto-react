@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/inter.css);
+@import url(./blocks/root/root.css);
+@import url(./blocks/page/page.css);
+@import url(./blocks/content/content.css);
+@import url(./blocks/header/header.css);
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/edit-button/edit-button.css);
+@import url(./blocks/add-button/add-button.css);
+@import url(./blocks/elements/elements.css);
+@import url(./blocks/element/element.css);
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/form/form.css);
+@import url(./blocks/submit__button/submit__button.css);
+@import url(./blocks/popup-image/popup-image.css);
+@import url(./blocks/popup/_opened/popup_opened.css);
+@import url(./blocks/form/__item-error/form__item-error.css);
+@import url(./blocks/form/__item/_error/form__item_error.css);
+@import url(./blocks/form/__item-error/_active/form__item-error_active.css);
+@import url(./blocks/submit__button/_disabled/submit__button_disabled.css);
+@import url(./blocks/popup-submit__button/popup-submit__button.css);
+@import url(./blocks/form-submit/form-submit.css);
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    background-color: black;
 }
