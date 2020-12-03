@@ -4,8 +4,8 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import ImagePopup from "./ImagePopup";
-import api from "../utils/Api";
-import currentUserContext from "../contexts/CurrentUserContext";
+import api from "../utils/api";
+import CurrentUserContext from "../contexts/CurrentUserContext";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
@@ -121,7 +121,7 @@ function App() {
   }
 
   return (
-    <currentUserContext.Provider value={currentUser}>
+    <CurrentUserContext.Provider value={currentUser}>
       <Header />
       <Main
         onEditProfile={handleProfilePopup}
@@ -153,7 +153,7 @@ function App() {
         isLoading={isLoading}
       />
       <ImagePopup card={selectedCard} onClose={closeAllPopups} />
-    </currentUserContext.Provider>
+    </CurrentUserContext.Provider>
   );
 }
 

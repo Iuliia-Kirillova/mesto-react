@@ -1,8 +1,8 @@
 import React from "react";
-import currentUserContext from '../contexts/CurrentUserContext';
+import CurrentUserContext from '../contexts/CurrentUserContext';
 
 function Card(props) {
-    const currentUser = React.useContext(currentUserContext);
+    const currentUser = React.useContext(CurrentUserContext);
 
     const isOwn = props.card.owner._id === currentUser._id;
     const cardDeleteButtonClassName = (
