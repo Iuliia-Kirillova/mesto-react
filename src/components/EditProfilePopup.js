@@ -1,16 +1,17 @@
 import React from "react";
-import CurrentUserContext from "../contexts/CurrentUserContext";
+
+import currentUserContext from "../contexts/CurrentUserContext";
 import PopupWithForm from "./PopupWithForm";
 
 function EditProfilePopup(props) {
-    const currentUser = React.useContext(CurrentUserContext);
+    const currentUser = React.useContext(currentUserContext);
     const [name, setName] = React.useState("");
-    const [about, setAbout] = React.useState("");
+    const [description, setDescription] = React.useState("");
 
     React.useEffect(() => {
         if (currentUser.name !== undefined) {
             setName(currentUser.name);
-            setAbout(currentUser.about);
+            setDescription(currentUser.about);
         }
     }, [currentUser]);
 
@@ -19,14 +20,14 @@ function EditProfilePopup(props) {
     }
 
     function handleChangeDescription(e) {
-        setAbout(e.target.value);
+        setDescription(e.target.value);
     }
 
     function handleSubmit(e) {
         e.preventDefault();
         props.onUpdateUser({
             name,
-            about: about,
+            about: description,
         });
     }
 
@@ -62,7 +63,7 @@ function EditProfilePopup(props) {
                     placeholder="О себе"
                     minLength="2"
                     maxLength="200"
-                    value={about}
+                    value={description}
                     onChange={handleChangeDescription}
                     required
                 />

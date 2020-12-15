@@ -1,9 +1,10 @@
 import React from "react";
+
 import Card from "../components/Card.js";
-import CurrentUserContext from "../contexts/CurrentUserContext";
+import currentUserContext from "../contexts/CurrentUserContext";
 
 function Main(props) {
-    const currentUser = React.useContext(CurrentUserContext);
+    const currentUser = React.useContext(currentUserContext);
 
     return (
         <main className="content">
@@ -18,7 +19,7 @@ function Main(props) {
                             backgroundSize: "cover",
                         }}
                     />
-                    <div className="profile__icon" />
+                    <div className="profile__icon"></div>
                 </div>
                 <div className="profile__container">
                     <div className="profile__wrapper">
@@ -58,7 +59,7 @@ function Main(props) {
                 </ul>
             </section>
         </main>
-    )
+    );
 }
 
 export default Main;
